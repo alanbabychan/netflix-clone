@@ -28,7 +28,7 @@ function Banner() {
             <h1 className='description'>{movie ? movie.overview : ""}</h1>
             </div>
         <div className="fade_bottom"></div>
-    className='banner'>
+    className='banner'
         <div className='content'>
             <h1 className='title'>{movie ? movie.title : ""}</h1>
             <div className='banner_buttons'>
