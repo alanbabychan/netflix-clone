@@ -8,7 +8,8 @@
 .posters{
     display: flex;
     padding: 20px;
-    
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .poster{
