@@ -1,0 +1,48 @@
+## 📖 Overview
+
+The **Netflix Clone** is a responsive video streaming web application that replicates the design and functionality of Netflix.  
+It allows users to **browse, search, and view movie details** using data fetched from the **TMDb (The Movie Database) API**.  
+Developed using **React.js**, **TypeScript**, and **Material UI**, it features **lazy loading**, **custom hooks**, and **Redux Toolkit** for smooth and efficient performance.
+
+---
+
+## 🧰 Tech Stack
+
+| Category | Tools / Libraries | Purpose |
+|-----------|-------------------|----------|
+| **Frontend Framework** | [React.js](https://react.dev/) | UI development |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) | Type safety |
+| **Styling** | [Material UI (MUI)](https://mui.com/), [Emotion](https://emotion.sh/docs/introduction) | Component styling |
+| **Animations** | [Framer Motion](https://www.framer.com/docs/) | Smooth UI transitions |
+| **State Management** | [Redux Toolkit](https://redux-toolkit.js.org/) | Centralized app state |
+| **Routing** | [React Router DOM v6](https://reactrouter.com/en/main) | Client-side navigation |
+| **API Integration** | [TMDb API](https://developers.themoviedb.org/3/getting-started/introduction) | Real-time movie data |
+| **Carousel / Sliders** | [React Slick](https://react-slick.neostack.com/), [Slick Carousel](https://kenwheeler.github.io/slick/) | Netflix-style sliders |
+| **Video Player** | [Video.js](https://videojs.com/), [videojs-youtube](https://github.com/videojs/videojs-youtube) | Movie previews and playback |
+| **Build Tool** | [Vite](https://vitejs.dev/) | Fast bundler and dev server |
+| **Animations / Loader** | [Framer Motion](https://www.framer.com/) | Page transitions |
+| **Containerization (Optional)** | Docker | Simplified deployment |
+
+---
+
+## ⚙️ Features
+
+✅ **Modern Netflix UI** – Clean, minimal, and responsive interface  
+✅ **Dynamic Movie Feed** – Fetches live data from TMDb API  
+✅ **Category Browsing** – Explore genres and trending titles  
+✅ **Video Previews** – Watch trailers directly within the app  
+✅ **Lazy Loading & Code Splitting** – Faster performance  
+✅ **Carousel Navigation** – Netflix-like horizontal sliders  
+✅ **Responsive Layout** – Works perfectly on mobile, tablet, and desktop  
+✅ **Redux Toolkit Query** – Optimized data fetching and caching  
+
+---
+
+## 🧩 Installation
+
+### 🖥️ Run Locally
+```bash
+git clone https://github.com/alanbabychan/netflix-clone.git
+cd KIDDO-Netflix-Clone
+npm install
+npm run dev
