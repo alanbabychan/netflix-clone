@@ -2,11 +2,21 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import { MAIN_PATH } from "src/constant";
 
 import MainLayout from "src/layouts/MainLayout";
+import LoginPage from "src/pages/LoginPage";
+import ProtectedLayout from "src/components/ProtectedLayout";
 
 const router = createBrowserRouter([
   {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
     path: "/",
-    element: <MainLayout />,
+    element: (
+      <ProtectedLayout>
+        <MainLayout />
+      </ProtectedLayout>
+    ),
     children: [
       {
         path: MAIN_PATH.root,

@@ -10,16 +10,21 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import useOffSetTop from "src/hooks/useOffSetTop";
 import { APP_BAR_HEIGHT } from "src/constant";
 import Logo from "../Logo";
 import SearchBox from "../SearchBox";
 import NetflixNavigationLink from "../NetflixNavigationLink";
+import { logout } from "src/store/slices/authSlice";
 
 const pages = ["My List", "Movies", "Tv Shows"];
 
 const MainHeader = () => {
   const isOffset = useOffSetTop(APP_BAR_HEIGHT);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -153,8 +158,17 @@ const MainHeader = () => {
             open={Boolean(anchorElUser)}
             onClose={handleCloseUserMenu}
           >
-            {["Account", "Logout"].map((setting) => (
-              <MenuItem key={setting} onClick={handleCloseUserMenu}>
+            {[ "Logout"].map((setting) => (
+              <MenuItem
+                key={setting}
+                onClick={() => {
+                  handleCloseUserMenu();
+                  if (setting === "Logout") {
+                    dispatch(logout());
+                    navigate("/login");
+                  }
+                }}
+              >
                 <Typography textAlign="center">{setting}</Typography>
               </MenuItem>
             ))}
