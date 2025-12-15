@@ -6,8 +6,6 @@ import {
   Typography,
   Paper,
   Container,
-  Tabs,
-  Tab,
   Alert,
 } from '@mui/material';
 import { useDispatch } from 'react-redux';
@@ -23,7 +21,7 @@ interface User {
 }
 
 const LoginPage: React.FC = () => {
-  const [tab, setTab] = useState(0); // 0: Login, 1: Sign Up
+  const [tab, setTab] = useState<'login' | 'signup' | 'forgot'>('login');
   const [loginData, setLoginData] = useState({ identifier: '', password: '' });
   const [signupData, setSignupData] = useState({
     firstName: '',
@@ -83,7 +81,7 @@ const LoginPage: React.FC = () => {
     setUsers(updatedUsers);
     localStorage.setItem('users', JSON.stringify(updatedUsers));
     setError('');
-    setTab(0); // back to login
+    setTab('login'); // back to login
   };
 
   const handleForgotPassword = () => {
@@ -115,13 +113,13 @@ const LoginPage: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center', // centers vertically
-            minHeight: '80vh', // ensures vertical centering space
+            justifyContent: 'center',
+            minHeight: '80vh',
             borderRadius: 2,
             transition: 'all 0.3s ease',
           }}
         >
-          {/* ===== Netflix Logo/Text ===== */}
+          {/* ===== Netflix Title ===== */}
           <Typography
             component="h1"
             variant="h4"
@@ -132,28 +130,49 @@ const LoginPage: React.FC = () => {
             Netflix
           </Typography>
 
-          {/* ===== Tabs ===== */}
-          <Tabs
-            value={tab}
-            onChange={(e, newValue) => setTab(newValue)}
-            centered
+          {/* ===== Custom Toggle (Login / Sign Up) ===== */}
+          <Box
             sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 2,
               mb: 3,
-              '& .MuiTab-root': {
-                color: 'rgba(255,255,255,0.6)',
-                fontWeight: 500,
-              },
-              '& .Mui-selected': {
-                color: 'white',
-              },
-              '& .MuiTabs-indicator': {
-                backgroundColor: 'red',
-              },
+              mt: 1,
             }}
           >
-            <Tab label="Login" />
-            <Tab label="Sign Up" />
-          </Tabs>
+            <Button
+              onClick={() => setTab('login')}
+              variant={tab === 'login' ? 'contained' : 'text'}
+              sx={{
+                bgcolor: tab === 'login' ? '#e50914' : 'transparent',
+                color: tab === 'login' ? 'white' : 'rgba(255,255,255,0.6)',
+                borderRadius: '20px',
+                px: 3,
+                textTransform: 'none',
+                '&:hover': {
+                  bgcolor: tab === 'login' ? '#f40612' : 'rgba(255,255,255,0.1)',
+                },
+              }}
+            >
+              Login
+            </Button>
+            <Button
+              onClick={() => setTab('signup')}
+              variant={tab === 'signup' ? 'contained' : 'text'}
+              sx={{
+                bgcolor: tab === 'signup' ? '#e50914' : 'transparent',
+                color: tab === 'signup' ? 'white' : 'rgba(255,255,255,0.6)',
+                borderRadius: '20px',
+                px: 3,
+                textTransform: 'none',
+                '&:hover': {
+                  bgcolor: tab === 'signup' ? '#f40612' : 'rgba(255,255,255,0.1)',
+                },
+              }}
+            >
+              Sign Up
+            </Button>
+          </Box>
 
           {/* ===== Error Alert ===== */}
           {error && (
@@ -163,7 +182,7 @@ const LoginPage: React.FC = () => {
           )}
 
           {/* ===== LOGIN FORM ===== */}
-          {tab === 0 && (
+          {tab === 'login' && (
             <Box sx={{ width: '100%', textAlign: 'center' }}>
               <TextField
                 fullWidth
@@ -174,10 +193,7 @@ const LoginPage: React.FC = () => {
                 }
                 margin="normal"
                 InputLabelProps={{ style: { color: 'white' } }}
-                InputProps={{
-                  style: { color: 'white' },
-                  sx: { borderColor: 'white' },
-                }}
+                InputProps={{ style: { color: 'white' } }}
               />
               <TextField
                 fullWidth
@@ -206,7 +222,7 @@ const LoginPage: React.FC = () => {
               </Button>
               <Button
                 fullWidth
-                onClick={() => setTab(2)}
+                onClick={() => setTab('forgot')}
                 sx={{ mt: 1, color: 'white', textTransform: 'none' }}
               >
                 Forgot Password?
@@ -215,7 +231,7 @@ const LoginPage: React.FC = () => {
           )}
 
           {/* ===== SIGN UP FORM ===== */}
-          {tab === 1 && (
+          {tab === 'signup' && (
             <Box sx={{ width: '100%', textAlign: 'center' }}>
               <TextField
                 fullWidth
@@ -304,8 +320,8 @@ const LoginPage: React.FC = () => {
             </Box>
           )}
 
-          {/* ===== FORGOT PASSWORD FORM ===== */}
-          {tab === 2 && (
+          {/* ===== FORGOT PASSWORD ===== */}
+          {tab === 'forgot' && (
             <Box sx={{ width: '100%', textAlign: 'center' }}>
               <TextField
                 fullWidth
@@ -330,7 +346,7 @@ const LoginPage: React.FC = () => {
               </Button>
               <Button
                 fullWidth
-                onClick={() => setTab(0)}
+                onClick={() => setTab('login')}
                 sx={{ mt: 1, color: 'white', textTransform: 'none' }}
               >
                 Back to Login

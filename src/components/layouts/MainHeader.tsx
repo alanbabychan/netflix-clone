@@ -160,6 +160,7 @@ const MainHeader = () => {
           >
             {[ "Logout"].map((setting) => (
               <MenuItem
+              
                 key={setting}
                 onClick={() => {
                   handleCloseUserMenu();
