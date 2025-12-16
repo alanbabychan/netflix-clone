@@ -21,6 +21,7 @@ Developed using **React.js**, **TypeScript**, and **Material UI**, it features *
 | **Video Player** | [Video.js](https://videojs.com/), [videojs-youtube](https://github.com/videojs/videojs-youtube) | Movie previews and playback |
 | **Build Tool** | [Vite](https://vitejs.dev/) | Fast bundler and dev server |
 | **Animations / Loader** | [Framer Motion](https://www.framer.com/) | Page transitions |
+| **Local Storage** | Browser LocalStorage | Persistent user sessions |
 | **Containerization (Optional)** | Docker | Simplified deployment |
 
 ---
@@ -35,6 +36,20 @@ Developed using **React.js**, **TypeScript**, and **Material UI**, it features *
 ✅ **Carousel Navigation** – Netflix-like horizontal sliders  
 ✅ **Responsive Layout** – Works perfectly on mobile, tablet, and desktop  
 ✅ **Redux Toolkit Query** – Optimized data fetching and caching  
+✅ **Premium Subscription System** – Multiple subscription plans with payment gateway  
+✅ **Ad-Free Experience** – Premium users enjoy ad-free streaming  
+✅ **Persistent Authentication** – Login state maintained across sessions  
+✅ **User Profile Management** – Subscription status with crown emoji display  
+
+---
+
+## 💳 Subscription Plans
+
+| Plan | Price | Features |
+|------|-------|----------|
+| **Basic** | ₹899/month | 720p HD, 1 screen, Ad-free |
+| **Standard** | ₹1399/month | 1080p Full HD, 2 screens, Downloads |
+| **Premium** | ₹1799/month | 4K Ultra HD, 4 screens, All features |
 
 ---
 
