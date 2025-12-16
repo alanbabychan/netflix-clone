@@ -10,14 +10,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import useOffSetTop from "src/hooks/useOffSetTop";
-import { APP_BAR_HEIGHT } from "src/constant";
+import { APP_BAR_HEIGHT, MAIN_PATH } from "src/constant";
 import Logo from "../Logo";
 import SearchBox from "../SearchBox";
 import NetflixNavigationLink from "../NetflixNavigationLink";
 import { logout } from "src/store/slices/authSlice";
+import { RootState } from "src/store";
+import { Button, Chip } from "@mui/material";
+import Link from "@mui/material/Link";
+
 
 const pages = ["My List", "Movies", "Tv Shows"];
 
@@ -25,6 +29,7 @@ const MainHeader = () => {
   const isOffset = useOffSetTop(APP_BAR_HEIGHT);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { isSubscribed, currentPlan } = useSelector((state: RootState) => state.subscription);
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -121,7 +126,7 @@ const MainHeader = () => {
         <Stack
           direction="row"
           spacing={3}
-          sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+          sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, alignItems: "center" }}
         >
           {pages.map((page) => (
             <NetflixNavigationLink
@@ -133,9 +138,68 @@ const MainHeader = () => {
               {page}
             </NetflixNavigationLink>
           ))}
+         <Typography
+  variant="body2"
+  sx={{
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-50%)",
+    color: "text.secondary",
+    fontSize: "0.75rem",
+  }}
+>
+  Developed by{" "}
+  <Link
+    href="https://github.com/alanbabychan"
+    target="_blank"
+    rel="noopener noreferrer"
+    underline="none"
+    sx={{
+      color: "text.primary",
+      fontWeight: 600,
+    }}
+  >
+    KIDDO
+  </Link>
+</Typography>
+
         </Stack>
 
-        <Box sx={{ flexGrow: 0, display: "flex", gap: 2 }}>
+        <Box sx={{ flexGrow: 0, display: "flex", gap: 1, alignItems: "center", height: APP_BAR_HEIGHT }}>
+          {isSubscribed && currentPlan ? (
+            <Chip 
+              label={`👑 ${currentPlan.name}`} 
+              variant="filled"
+              sx={{ 
+                fontWeight: 'bold',
+                backgroundColor: '#e50914',
+                color: 'white'
+              }}
+            />
+          ) : (
+            <Box
+              component="button"
+              onClick={() => navigate(`/${MAIN_PATH.subscription}`)}
+              sx={{
+                minHeight: 32,
+                padding: '6px 16px',
+                backgroundColor: '#e50914',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                fontSize: '0.875rem',
+                fontWeight: 500,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                marginLeft: '-2px',
+                '&:hover': {
+                  backgroundColor: '#b8070f'
+                }
+              }}
+            >
+              GET PREMIUM
+            </Box>
+          )}
           <SearchBox />
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -158,7 +222,7 @@ const MainHeader = () => {
             open={Boolean(anchorElUser)}
             onClose={handleCloseUserMenu}
           >
-            {[ "Logout"].map((setting) => (
+            {["Subscription", "Logout"].map((setting) => (
               <MenuItem
               
                 key={setting}
@@ -167,6 +231,8 @@ const MainHeader = () => {
                   if (setting === "Logout") {
                     dispatch(logout());
                     navigate("/login");
+                  } else if (setting === "Subscription") {
+                    navigate(`/${MAIN_PATH.subscription}`);
                   }
                 }}
               >

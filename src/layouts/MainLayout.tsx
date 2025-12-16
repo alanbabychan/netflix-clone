@@ -8,6 +8,7 @@ import PortalProvider from "src/providers/PortalProvider";
 import { MAIN_PATH } from "src/constant";
 import { Footer, MainHeader } from "src/components/layouts";
 import MainLoadingScreen from "src/components/MainLoadingScreen";
+import AdBanner from "src/components/AdBanner";
 
 export default function MainLayout() {
   const location = useLocation();
@@ -32,6 +33,7 @@ export default function MainLayout() {
         </PortalProvider>
       </DetailModalProvider>
       {location.pathname !== `/${MAIN_PATH.watch}` && <Footer />}
+      <AdBanner />
     </Box>
   );
 }
