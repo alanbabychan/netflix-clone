@@ -6,6 +6,8 @@
 
 🔥 **Alan-Netflix Clone 2.0** introduces a completely improved Netflix-like experience with enhanced UI, authentication, and movie playback features.
 
+---
+
 ### ✨ What's New in Version 2.0
 
 * ✅ Fully upgraded Netflix-style layout
