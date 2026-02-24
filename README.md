@@ -1,6 +1,8 @@
 ---
 
 ## 🚀 New Release Available — Alan-Netflix Clone 2.0
+![Version](https://img.shields.io/badge/version-v1.0-blue)
+![Status](https://img.shields.io/badge/status-stable-success)
 
 🎉 This project has been upgraded to a newer and more advanced version.
 
