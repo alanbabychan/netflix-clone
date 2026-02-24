@@ -1,3 +1,39 @@
+---
+
+## 🚀 New Release Available — Alan-Netflix Clone 2.0
+
+🎉 This project has been upgraded to a newer and more advanced version.
+
+🔥 **Alan-Netflix Clone 2.0** introduces a completely improved Netflix-like experience with enhanced UI, authentication, and movie playback features.
+
+### ✨ What's New in Version 2.0
+
+* ✅ Fully upgraded Netflix-style layout
+* ✅ Movie playback support
+* ✅ User avatars & profile selection
+* ✅ Continue as Guest feature
+* ✅ Improved authentication & password consistency
+* ✅ Enhanced responsive design
+* ✅ Performance optimizations
+* ✅ Better navigation experience
+
+👉 **Check Latest Version Here:**
+🔗 [https://github.com/alanbabychan/Alan-Netflix-Clone-2.0](https://github.com/alanbabychan/Alan-Netflix-Clone-2.0)
+
+---
+
+## ⚠️ Project Status
+
+✅ **Kiddo Netflix Clone (v1.0)** — Stable Version
+🚀 **Alan-Netflix Clone 2.0** — Active Development & Latest Release
+
+This repository represents the **initial version** of the Netflix Clone project.
+
+For the latest features and improvements, please visit **Version 2.0**.
+
+---
+
+
 ## 📖 Overview
 
 The **Netflix Clone** is a responsive video streaming web application that replicates the design and functionality of Netflix.  
@@ -50,6 +86,7 @@ Developed using **React.js**, **TypeScript**, and **Material UI**, it features *
 | **Basic** | ₹899/month | 720p HD, 1 screen, Ad-free |
 | **Standard** | ₹1399/month | 1080p Full HD, 2 screens, Downloads |
 | **Premium** | ₹1799/month | 4K Ultra HD, 4 screens, All features |
+
 
 ---
 
