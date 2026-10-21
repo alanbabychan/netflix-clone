@@ -1,104 +1,147 @@
----
+# 🚀 Alan-Netflix Clone 2.0
 
-## 🚀 New Release Available — Alan-Netflix Clone 2.0
-![Version](https://img.shields.io/badge/version-v1.0-blue)
+![Version](https://img.shields.io/badge/version-v2.0-blue)
 ![Status](https://img.shields.io/badge/status-stable-success)
 
 🎉 This project has been upgraded to a newer and more advanced version.
 
-🔥 **Alan-Netflix Clone 2.0** introduces a completely improved Netflix-like experience with enhanced UI, authentication, and movie playback features.
+🔥 **Alan-Netflix Clone 2.0** introduces an improved Netflix-inspired experience with enhanced UI, authentication, and movie playback features.
 
----
+## ✨ What's New in Version 2.0
 
-### ✨ What's New in Version 2.0
+- ✅ Fully upgraded Netflix-style layout
+- ✅ Movie playback support
+- ✅ User avatars and profile selection
+- ✅ Continue as Guest feature
+- ✅ Improved authentication and password consistency
+- ✅ Enhanced responsive design
+- ✅ Performance optimizations
+- ✅ Better navigation experience
 
-* ✅ Fully upgraded Netflix-style layout
-* ✅ Movie playback support
-* ✅ User avatars & profile selection
-* ✅ Continue as Guest feature
-* ✅ Improved authentication & password consistency
-* ✅ Enhanced responsive design
-* ✅ Performance optimizations
-* ✅ Better navigation experience
-
-👉 **Check Latest Version Here:**
-🔗 [https://github.com/alanbabychan/Alan-Netflix-Clone-2.0](https://github.com/alanbabychan/Alan-Netflix-Clone-2.0)
+👉 **Check out the latest version:**  
+[Alan-Netflix Clone 2.0](https://github.com/alanbabychan/Alan-Netflix-Clone-2.0)
 
 ---
 
 ## ⚠️ Project Status
 
-✅ **Kiddo Netflix Clone (v1.0)** — Stable Version
-🚀 **Alan-Netflix Clone 2.0** — Active Development & Latest Release
+- ✅ **Kiddo Netflix Clone (v1.0)** — Initial stable version
+- 🚀 **Alan-Netflix Clone 2.0** — Latest version; see the linked repository for its current development status
 
-This repository represents the **initial version** of the Netflix Clone project.
+This repository represents the initial version of the Netflix clone project.
 
-For the latest features and improvements, please visit **Version 2.0**.
+For the latest features and improvements, visit [Alan-Netflix Clone 2.0](https://github.com/alanbabychan/Alan-Netflix-Clone-2.0).
 
 ---
 
-
 ## 📖 Overview
 
-The **Netflix Clone** is a responsive video streaming web application that replicates the design and functionality of Netflix.  
-It allows users to **browse, search, and view movie details** using data fetched from the **TMDb (The Movie Database) API**.  
-Developed using **React.js**, **TypeScript**, and **Material UI**, it features **lazy loading**, **custom hooks**, and **Redux Toolkit** for smooth and efficient performance.
+The **Netflix Clone** is a responsive video-streaming web application inspired by Netflix. It allows users to browse movies, search for titles, and view movie details using data from the **TMDb (The Movie Database) API**.
+
+The project uses **React.js**, **TypeScript**, and **Material UI**, with tools such as lazy loading, custom hooks, and Redux Toolkit to support an interactive user experience.
 
 ---
 
 ## 🧰 Tech Stack
 
 | Category | Tools / Libraries | Purpose |
-|-----------|-------------------|----------|
-| **Frontend Framework** | [React.js](https://react.dev/) | UI development |
-| **Language** | [TypeScript](https://www.typescriptlang.org/) | Type safety |
-| **Styling** | [Material UI (MUI)](https://mui.com/), [Emotion](https://emotion.sh/docs/introduction) | Component styling |
-| **Animations** | [Framer Motion](https://www.framer.com/docs/) | Smooth UI transitions |
-| **State Management** | [Redux Toolkit](https://redux-toolkit.js.org/) | Centralized app state |
-| **Routing** | [React Router DOM v6](https://reactrouter.com/en/main) | Client-side navigation |
-| **API Integration** | [TMDb API](https://developers.themoviedb.org/3/getting-started/introduction) | Real-time movie data |
-| **Carousel / Sliders** | [React Slick](https://react-slick.neostack.com/), [Slick Carousel](https://kenwheeler.github.io/slick/) | Netflix-style sliders |
-| **Video Player** | [Video.js](https://videojs.com/), [videojs-youtube](https://github.com/videojs/videojs-youtube) | Movie previews and playback |
-| **Build Tool** | [Vite](https://vitejs.dev/) | Fast bundler and dev server |
-| **Animations / Loader** | [Framer Motion](https://www.framer.com/) | Page transitions |
-| **Local Storage** | Browser LocalStorage | Persistent user sessions |
-| **Containerization (Optional)** | Docker | Simplified deployment |
+|---|---|---|
+| Frontend framework | [React.js](https://react.dev/) | User interface |
+| Language | [TypeScript](https://www.typescriptlang.org/) | Type safety |
+| Styling | [Material UI](https://mui.com/), [Emotion](https://emotion.sh/docs/introduction) | Component styling |
+| Animations | [Framer Motion](https://www.framer.com/motion/) | UI transitions |
+| State management | [Redux Toolkit](https://redux-toolkit.js.org/) | Application state |
+| Routing | [React Router](https://reactrouter.com/) | Client-side navigation |
+| API integration | [TMDb API](https://developer.themoviedb.org/docs) | Movie data |
+| Carousel / sliders | [React Slick](https://react-slick.neostack.com/), [Slick Carousel](https://kenwheeler.github.io/slick/) | Horizontal sliders |
+| Video player | [Video.js](https://videojs.com/), [videojs-youtube](https://github.com/videojs/videojs-youtube) | Video playback integration |
+| Build tool | [Vite](https://vite.dev/) | Development server and build |
+| Local storage | Browser LocalStorage | Client-side persistence |
+| Containerization | [Docker](https://www.docker.com/) (optional) | Containerized deployment |
 
 ---
 
 ## ⚙️ Features
 
-✅ **Modern Netflix UI** – Clean, minimal, and responsive interface  
-✅ **Dynamic Movie Feed** – Fetches live data from TMDb API  
-✅ **Category Browsing** – Explore genres and trending titles  
-✅ **Video Previews** – Watch trailers directly within the app  
-✅ **Lazy Loading & Code Splitting** – Faster performance  
-✅ **Carousel Navigation** – Netflix-like horizontal sliders  
-✅ **Responsive Layout** – Works perfectly on mobile, tablet, and desktop  
-✅ **Redux Toolkit Query** – Optimized data fetching and caching  
-✅ **Premium Subscription System** – Multiple subscription plans with payment gateway  
-✅ **Ad-Free Experience** – Premium users enjoy ad-free streaming  
-✅ **Persistent Authentication** – Login state maintained across sessions  
-✅ **User Profile Management** – Subscription status with crown emoji display  
+- ✅ **Modern Netflix-inspired UI** — Responsive interface
+- ✅ **Dynamic movie feed** — Fetches movie data from TMDb
+- ✅ **Category browsing** — Explore genres and trending titles
+- ✅ **Video previews** — Trailer playback, if configured
+- ✅ **Lazy loading and code splitting** — Improved loading performance
+- ✅ **Carousel navigation** — Horizontal movie sliders
+- ✅ **Responsive layout** — Mobile, tablet, and desktop support
+- ✅ **Redux Toolkit Query** — Data fetching and caching, if configured
+- ✅ **Subscription plans** — Plan selection, if implemented
+- ✅ **Authentication** — Login and persistent session support, if configured
+- ✅ **User profiles** — Profile selection and management, if implemented
+
+*Note: Features marked as conditional should be verified against the current code before being advertised as available.*
 
 ---
 
 ## 💳 Subscription Plans
 
-| Plan | Price | Features |
-|------|-------|----------|
-| **Basic** | ₹899/month | 720p HD, 1 screen, Ad-free |
-| **Standard** | ₹1399/month | 1080p Full HD, 2 screens, Downloads |
-| **Premium** | ₹1799/month | 4K Ultra HD, 4 screens, All features |
+The following table describes the plans presented in the project UI, if implemented. These are illustrative project values, not actual Netflix subscription prices.
 
+| Plan | Example price | Advertised features |
+|---|---:|---|
+| **Basic** | ₹899/month | 720p HD, one screen |
+| **Standard** | ₹1,399/month | 1080p Full HD, two screens |
+| **Premium** | ₹1,799/month | 4K Ultra HD, four screens |
 
 ---
 
 ## 🧩 Installation
 
-### 🖥️ Run Locally
+### 🖥️ Run locally
+
+**Prerequisites:** Node.js, npm, and Git.
+
 ```bash
 git clone https://github.com/alanbabychan/netflix-clone.git
-cd KIDDO-Netflix-Clone
+cd netflix-clone
 npm install
 npm run dev
+```
+
+Open the local URL printed in your terminal by Vite.
+
+> If the project uses a different package manager or doesn't have a `dev` script, check `package.json` and adjust these commands accordingly.
+
+---
+
+## 🔐 Environment variables
+
+If the project requires a TMDb API key or other credentials, configure them using the variable names expected by the application. Keep secrets out of source control, and provide a `.env.example` file with placeholder values when appropriate.
+
+---
+
+## 🤝 Contributing
+
+Contributions and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a branch for your change.
+3. Make and test your changes.
+4. Submit a pull request describing the improvement.
+
+For bugs, open an issue with the steps to reproduce the problem and the expected behavior.
+
+---
+
+## 📄 Disclaimer
+
+This is an independent educational project inspired by the Netflix user interface. It is not affiliated with or endorsed by Netflix. Movie data may be provided by TMDb; review the relevant API terms and attribution requirements.
+
+---
+
+## 👨‍💻 Author
+
+**Alan Babychan**
+
+- GitHub: [@alanbabychan](https://github.com/alanbabychan)
+- Portfolio: [alanbabychan.online](https://www.alanbabychan.online)
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star!
